@@ -1,0 +1,7 @@
+Skill Name,Domain,Status,Priority,Target Users,Key Features
+Focus Coach,Neurodivergent Empowerment,Production,HIGH,"ADHD, AuDHD, executive function challenges","Task breakdown, timeboxing, hyperfocus detection, BROski$ gamification, energy tracking"
+Accessible Design,Neurodivergent Empowerment,Production,HIGH,"Dyslexic, ADHD, autistic users, developers","Dyslexia-friendly typography, ADHD layouts, WCAG 2.1+ compliance, dark mode, form accessibility"
+Mental Energy Logger,Neurodivergent Empowerment,Production,HIGH,Neurodivergent individuals tracking mood/energy,"Emoji check-ins, voice logging, pattern recognition, visual summaries, CSV export"
+NeuroHealth Tracker,Global Health,Production,HIGH,Neurodivergent users managing ADHD meds and/or cannabis,"Medication logging, cannabis tracking, THC/ADHD interaction warnings, side effect analysis"
+HyperLearn,Education,Production,MEDIUM,"ADHD, dyslexic, autistic autodidacts","Microlessons (5-10 min), multi-format content, text-to-speech, gamification, self-paced"
+Carbon Coach,Sustainability,Production,MEDIUM,"Developers, content creators concerned about carbon footprint","Energy tracking, CodeCarbon integration, gamified challenges, optimization tips, team challenges"
