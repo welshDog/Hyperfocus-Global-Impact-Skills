@@ -3,7 +3,7 @@
 > [BRAIN] Modular AI Skills for neurodivergent empowerment, mental health, education, sustainability & global communities! -
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
-[![Skills](https://img.shields.io/badge/Skills-6%2F15-brightgreen.svg)](#skills-available-now)
+[![Skills](https://img.shields.io/badge/Skills-10%2F15-brightgreen.svg)](#skills-available-now)
 [![Contributors](https://img.shields.io/badge/Contributors-Welcome-orange.svg)](CONTRIBUTING.md)
 [![Accessibility](https://img.shields.io/badge/Accessibility-WCAG%202.1%2B-success.svg)](#accessibility-commitment)
 
@@ -20,47 +20,64 @@ Hyperfocus Global Impact Skills are **modular AI capabilities** that teach Claud
 - [DOCS] **Accessible Education** (microlearning, text-to-speech, adaptive)
 - [IMAGE] **Environmental Sustainability** (carbon tracking, green optimization)
 - [BROFIST] **Global Community** (multilingual, governance, collaboration)
+- 🐳 **HyperDocker DevOps** (Dockerfile hardening, Compose guardrails, container diagnostics)
 
 **Built by neurodivergent developers, for everyone.** [WORLD]
 
 ---
 
-## [MAP] Skills Available Now
+## [START] Start Here → Pick a Skill → Paste the Prompt
 
-| Skill | Domain | Status | Link |
-|-------|--------|--------|------|
-| Focus Coach | Neurodivergent | [DONE] Production | [View](./focus-coach/) |
-| Accessible Design | Neurodivergent | [DONE] Production | [View](./accessible-design/) |
-| Mental Energy Logger | Neurodivergent | [DONE] Production | [View](./mental-energy-logger/) |
-| NeuroHealth Tracker | Global Health | [DONE] Production | [View](./neurohealth-tracker/) |
-| HyperLearn | Education | [DONE] Production | [View](./hyperlearn/) |
-| Carbon Coach | Sustainability | [DONE] Production | [View](./carbon-coach/) |
-| Symptom Analysis | Global Health | [WIP] In Progress | Coming Soon |
-| Outbreak Alert | Global Health | [PLAN] Planned | Coming Soon |
-| Skill Assessment | Education | [PLAN] Planned | Coming Soon |
-| Micro-Mentoring | Education | [PLAN] Planned | Coming Soon |
-| Energy Dashboard | Sustainability | [PLAN] Planned | Coming Soon |
-| Green Rewards | Sustainability | [PLAN] Planned | Coming Soon |
-| Multilingual UI | Community | [PLAN] Planned | Coming Soon |
-| Governance Toolkit | Community | [PLAN] Planned | Coming Soon |
-| Community Hub | Community | [PLAN] Planned | Coming Soon |
+> **New here?** Every Skill has a `SKILL.md` file. Load it into Claude Code or the HyperAgent‑SDK, then paste the "Best Starter Prompt" from inside that file.
 
+### Load into Claude Code
+```bash
+# 1. Download any SKILL.md from a skill folder below
+curl -O https://raw.githubusercontent.com/welshDog/Hyperfocus-Global-Impact-Skills/main/<skill-folder>/SKILL.md
 
-**Legend:**
-- [DONE] Production = Ready to use
-- [WIP] In Progress = Active development
-- [PLAN] Planned = Coming soon
+# 2. Claude Code → Settings → Skills → Import → select SKILL.md
+```
+
+### Load into HyperAgent‑SDK
+```bash
+npm install -g @w3lshdog/hyper-agent
+node cli/index.js skills load ./SKILL.md
+node cli/index.js agents list
+```
+
+> **Naming rule:** All skill files are always called `SKILL.md` (lowercase) inside their own folder. Never `.SKILL.md`.
 
 ---
 
+## [MAP] Skills Available Now
+
+| Skill | Domain | Status | Path | Best Prompt |
+|-------|--------|--------|------|-------------|
+| Focus Coach | Neurodivergent | ✅ Production | [View](./focus-coach/) | `"Help me chunk this task using the Focus Coach skill"` |
+| Accessible Design | Neurodivergent | ✅ Production | [View](./accessible-design/) | `"Review this UI using Accessible Design skill"` |
+| Mental Energy Logger | Neurodivergent | ✅ Production | [View](./mental-energy-logger/) | `"Log my energy level and suggest next action"` |
+| NeuroHealth Tracker | Global Health | ✅ Production | [View](./neurohealth-tracker/) | `"Track today's symptoms and patterns"` |
+| HyperLearn | Education | ✅ Production | [View](./hyperlearn/) | `"Turn this topic into a 10-min microlesson"` |
+| Carbon Coach | Sustainability | ✅ Production | [View](./carbon-coach/) | `"Estimate my dev workflow's carbon footprint"` |
+| Hyperfocus Zone Agent Swarm | Neurodivergent / Dev Infra | 🟡 In Progress | [View](./Hyperfocus-Zone-Agent-Swarm.SKILL.md) | `"/hyperfocus:chunk-task 'Finish my MVP'"` |
+| HyperDocker Image Optimizer | DevOps / Docker | 🟡 In Progress | [View](./hyperdocker-image-optimizer/) | `"Use Image Optimizer skill to refactor this Dockerfile"` |
+| HyperDocker Compose Guardian | DevOps / Docker | 🟡 In Progress | [View](./hyperdocker-compose-guardian/) | `"Use Compose Guardian before editing docker-compose.yml"` |
+| HyperDocker Healer Diagnostics | DevOps / Docker | 🟡 In Progress | [View](./hyperdocker-healer-diagnostics/) | `"Run Healer Diagnostics on restarting container <name>"` |
+| Symptom Analysis | Global Health | 🔧 In Progress | Coming Soon | — |
+| Outbreak Alert | Global Health | 📋 Planned | Coming Soon | — |
+| Skill Assessment | Education | 📋 Planned | Coming Soon | — |
+| Micro-Mentoring | Education | 📋 Planned | Coming Soon | — |
+| Energy Dashboard | Sustainability | 📋 Planned | Coming Soon | — |
+
+---
 
 ## [ENERGY] Get Started In 60 Seconds
 
 ### For Claude Code Users
 ```bash
 # Clone the repo
-git clone https://github.com/hyperfocus-zone/global-impact-skills.git
-cd global-impact-skills
+git clone https://github.com/welshDog/Hyperfocus-Global-Impact-Skills.git
+cd Hyperfocus-Global-Impact-Skills
 
 # Load a Skill (example: Focus Coach)
 claude load-skill ./focus-coach
@@ -71,7 +88,7 @@ claude load-skill ./focus-coach
 from anthropic import Anthropic
 
 # Load any Skill
-with open('./focus-coach/SKILL.md', 'r') as f:
+with open('./hyperdocker-compose-guardian/SKILL.md', 'r') as f:
     skill_content = f.read()
 
 client = Anthropic(api_key="your-key")
@@ -79,13 +96,10 @@ client = Anthropic(api_key="your-key")
 ```
 
 ### For Claude.ai Web Users
-1. Download any `SKILL.md` file from this repo
+1. Download any `SKILL.md` file from a skill folder
 2. Go to claude.ai → Settings → Skills
 3. Upload the SKILL.md file
 4. Start using it in your chats! [CHAT]
-
-**BROSKI Hint:** Each Skill supports instant use with Claude—no setup required! [ROCKET]
-
 
 ---
 
@@ -123,8 +137,9 @@ Quick ways to contribute:
 
 ## [CHART] Roadmap
 
-- [x] **Phase 1:** Foundation (6 Skills built) [DONE]
-- [ ] **Phase 2:** Domain expansion (9 more Skills) [WIP]
+- [x] **Phase 1:** Foundation (6 Skills built) ✅
+- [x] **Phase 1.5:** HyperDocker + Agent Swarm Skills ✅
+- [ ] **Phase 2:** Domain expansion (5 more Skills) 🔧
 - [ ] **Phase 3:** Community Hub & marketplace
 - [ ] **Phase 4:** Global impact & research
 
@@ -143,13 +158,12 @@ Apache 2.0 - Free forever, open-source, community-driven.
 ## [LINK] Links
 
 - **Website:** [hyperfocuszone.com](https://hyperfocuszone.com)
-- **GitHub:** [hyperfocus-zone/global-impact-skills](https://github.com/hyperfocus-zone/global-impact-skills)
-- **Issues:** [Report bugs or request features](https://github.com/hyperfocus-zone/global-impact-skills/issues)
-- **Discussions:** [Join the community](https://github.com/hyperfocus-zone/global-impact-skills/discussions)
+- **GitHub:** [welshDog/Hyperfocus-Global-Impact-Skills](https://github.com/welshDog/Hyperfocus-Global-Impact-Skills)
+- **Issues:** [Report bugs or request features](https://github.com/welshDog/Hyperfocus-Global-Impact-Skills/issues)
 
 ---
 
-**Built with <3 in Wales, UK**
+**Built with <3 in Wales, UK 🏴󠁧󠁢󠁷󠁬󠁳󠁿**
 
 *"Every brain deserves technology that works FOR them."* [STAR]
 
